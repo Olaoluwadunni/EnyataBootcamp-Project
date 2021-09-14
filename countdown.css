@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body{
+    background-image: url("bambi.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    min-height: 100vh;
+    font-family: poppins;
+    margin: 0;
+    color:rgb(230,152,134) ;
+}
+.container {
+    margin-top: 10px;
+    display: flex;
+    color:rgb(25,53,186);
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+    font-weight: normal;
+    margin-bottom: 10px
+}
+.big-text {
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+.CD-element {
+    text-align: center;
+}
+.CD-element span {
+    font-size: 1rem
+}
+.sdhgjj {
+    color:rgb(119, 195, 240);
+}

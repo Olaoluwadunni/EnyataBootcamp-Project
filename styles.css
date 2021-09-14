@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0px;
+}
+html   {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 100%;
+    margin-top: 30px;
+    background: url(Pictures/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 1350px 800px;
+}
+
+.heading {
+    color: rgba(36, 33, 33, 0.404);
+    font-size: 45px;
+    position: absolute;
+    top: 5.5%;
+    left: 42.88%;
+    transform: translateX(-50%);
+    font-family:'Ubuntu', sans-serif;
+    letter-spacing: 7px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+
+@keyframes blinking {
+    0% {background-color: #fff}
+    50% {background-color: transparent}
+    100% {background-color: #fff}
+}
+
+.cards-wrapper {
+    width: 87.9%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 70px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card {
+    /* width: 273px; */
+    background-color: #eee;
+    display: flex;
+    width: 40rem;
+    height: 48em;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin: 0 5rem 0 0;
+    text-align: center;
+    padding: 2rem 0 0 0;
+    flex-direction: column;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform .5s;    
+}
+
+@keyframes cardAnim {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.card:nth-child(1) {
+    animation: cardAnim 1s 1s backwards;
+}
+
+.card:nth-child(2) {
+    animation: cardAnim 2s 1.7s backwards;
+}
+
+.card:nth-child(3) {
+    animation: cardAnim 3s 2.4s backwards;
+}
+
+.card:nth-child(4) {
+    animation: cardAnim 4s 3.1s backwards;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+}
+
+.image-top {
+    width: 82.5%;
+    height: 130px;
+    border-radius: 15%;
+    object-fit: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-top: -110px;
+    z-index: 10;
+    border: 5px solid #eee;
+}
+
+.card h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: #555;
+    margin: 10px;
+}
+
+.job {
+    font-family: 'Raleway', sans-serif;
+    color: #777;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.about-me {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    width: 90%;
+    margin: 15px 0;
+    color: #444;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.card button {
+    width: 140px;
+    height: 32px;
+    padding: 7px;
+    margin: 10px 0;
+    background-color: #9F9FD1;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #eee;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+}
+
+.card:hover button {
+    animation: buttonRotation 2s 1s linear;
+}
+
+@keyframes buttonRotation {
+    0% {transform: scale(1) rotateZ(0)}
+    5% {transform: scale(1.2) rotateZ(5deg)}
+    10% {transform: scale(1.2) rotateZ(-5deg)}
+    15% {transform: scale(1.2) rotateZ(5deg)}
+    20% {transform: scale(1.2) rotateZ(-5deg)}
+    25% {transform: scale(1.2) rotateZ(5deg)}
+    30% {transform: scale(1.2) rotateZ(-5deg)}
+    35% {transform: scale(1.2) rotateZ(5deg)}
+    40% {transform: scale(1.2) rotateZ(-5deg)}
+    45% {transform: scale(1.2) rotateZ(5deg)}
+    50% {transform: scale(1.2) rotateZ(-5deg)}
+    55% {transform: scale(1.2) rotateZ(5deg)}
+    60% {transform: scale(1.2) rotateZ(-5deg)}
+    65% {transform: scale(1.2) rotateZ(5deg)}
+    70% {transform: scale(1.2) rotateZ(-5deg)}
+    75% {transform: scale(1.2) rotateZ(5deg)}
+    80% {transform: scale(1.2) rotateZ(-5deg)}
+    85% {transform: scale(1.2) rotateZ(5deg)}
+    90% {transform: scale(1.2) rotateZ(-5deg)}
+    95% {transform: scale(1.2) rotateZ(5deg)}
+    100% {transform: scale(1) rotateZ(0)}
+}
+
+.social-icons {
+    width: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0 20px 0;
+    border-top: 1px solid #999;
+    padding-top: 20px;
+}
+
+.social-icons i {
+    font-size: 18px;
+}
+
+.fa-facebook-f {
+    color: #3b5999;
+}
+
+.fa-youtube {
+    color: #cd201f;
+}
+
+.fa-twitter {
+    color: #55acee;
+}
+
+.fa-google-plus-g {
+    color: #dd4b39;
+}
+
+@media(max-width: 1300px) {
+    .heading {
+        font-size: 65px;
+        width: 80%;
+    }
+
+    .cards-wrapper {
+        width: 100%;
+        top: 32%;
+    }
+
+    .image-top {
+        height: 200px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .container {
+        height: 100%;
+    }
+    .heading {
+        width: 90%;
+    }
+
+    .cards-wrapper {
+        flex-wrap: wrap;
+        padding: 300px 0 200px 0;
+    }
+
+    .card {
+        margin: 0 30px 50px 30px;
+    }
+}
+
+@media(max-width: 700px) {
+    .heading {
+        font-size: 50px;
+    }
+
+    .heading::after {
+        height: 40px;
+    }
+}
+html {
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+  }
+
+  :root{
+    --color-primary: hsl(0, 0%, 75%);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    box-sizing: border-box;
+}
+.container {
+    /* max-width: 1700px;
+    margin: auto; */
+    padding-top: 100px;
+    /* background-image: url("images/bg-curve-desktop.svg"); */
+    background-size: 1600px 800px;
+    background-color: #eef0f4;
+    padding-bottom: 100px;
+}
+.logo img   {
+    width: 170px;
+    height: 52px;
+    margin-right: 125.5em;
+}
+:root{
+    --color-primary: hsl(0, 0%, 75%);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    box-sizing: border-box;
+}
+.Header {
+    /* max-width: 1700px;
+    margin: auto; */
+    height: 900px;
+}
+.nav-bar {
+    display: flex;
+    padding:  40px 80px 0 70px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+.nav-list li {
+    margin-left: 50px;
+    font-weight: 700px;
+}
+
+.nav-list li a {
+    color:#00040b !important;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .nav-list li a:hover  {
+      color:hsl(238, 22%, 44%)!important;
+  }
+input [type="text"]:focus ~ label, input:focus ~ input{
+    border-color: hsl(238, 22%, 44%)!important;
+}
+/*  Intro Section  */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 30px 0 26px;
+  }
+  .intro-details {
+    padding-left: 50px;
+    margin-right: 115px;
+    margin-top: 30em;
+  }
+  .intro-details h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+  }
+  .intro-details p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  .intro-img {
+    height: 600px; 
+    margin-left: 10px;
+    margin-top: 16em;
+  }
+  .intro-img img {
+    height: 100%;
+  }
+  .GetStarted   {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  
+#submitbtn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #7173e8;
+    border-radius: 3px;
+    font-weight: bold;
+    width: 230px;
+    Height: 50px;
+    color: white;
+  } 
+  #submitbtn:hover {
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+  }
+  #submit:hover {
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+  }
+  #emailAddress    {
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: darkgray;
+    margin-right: 20px;
+  }
+  .request-btn.small {
+    margin-top: 10px;
+    padding: 20px 25px; 
+  }
+.wrappered {
+    margin-top: 10px;
+    display: flex;
+    color:rgb(243, 21, 21)
+}
+h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+    font-weight: 700;
+    margin-bottom: 10px
+}
+.big-text {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+.CD-element {
+    text-align: center;
+}
+.CD-element span {
+    font-size: 1rem
+}
+.sdhgjj {
+    color:rgb(119, 195, 240);
+}
+.JoinTheTeam    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(images/signup-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.JoinTheTeam h1{
+    color: white;
+}
+.Createaccount  {
+    width: 500px;
+    /* position: relative; */
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.signup-content {
+    background-color: #ffff;
+    padding: 50px 85px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height:1.8;
+    border-radius: 5px;
+    border: none;
+}
+form{
+    display: block;
+    margin-top: 0em;
+}
+.form-title {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    color: #222;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.form-group {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.form-group a{
+    text-decoration: none;color: blck;
+}
+.form-input {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 17px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+}
+#submit {
+    width: 329px;
+    height: 39px;
+    border: none;
+    color: white;
+    background-color: #7173e8;
+    border-radius: 5px;
+}
+footer  {
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: hsl(243, 87%, 12%);
+    color: #ffff;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.footer ul {
+    margin-top: 15px;
+}
+.footer li {
+    list-style-type: none;
+    font-size: 13px;
+    margin-top: 15px;
+    color:hsl(238, 22%, 44%);
+    cursor: pointer;
+}
+.footer li:hover {
+    color:hsl(243, 87%, 12%) ;
+}
+.footer p   {
+    font-size: 13px;
+    color:hsl(238, 22%, 44%);
+}
+.logooo {
+    margin-right: 0em!important;
+}
+.footer1    {
+    margin-top: 5px;
+    display: flex;
+    margin-left: 10px;
+}
+.footer .fas {
+    margin-right: 18px;
+    margin-top: 3px;
+}
+.foot   {
+    margin-top: 20px;
+}
+.footer .fab {
+    font-size: 20px;
+    margin-right: 12px;
+}
+.two_row  {
+    display: flex;
+}
+@media screen and (max-width: 1024px)    {
+    .logo img {
+        margin-right: 36em;
+    }
+    .intro  {
+        padding: 0;
+    }
+    .intro-details  {
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .intro-img img {
+        height: 56%;
+    }
+    .intro-details h1   {
+        font-size: 40px ;
+    }
+    .intro-details p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 17px;
+        width: 500px;
+    }
+    .Header {
+        height: 700px;
+    }
+    .intro-img {
+        height: 600px;
+        padding-right: 12px;
+        margin-top: 20em;
+    }
+    #emailAddress {
+        width: 200px;
+    }
+    #submitbtn {
+        width: 200px;
+    }
+    .cards-wrapper  {
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin-top: 55px;
+        position: relative;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: transform .5s; 
+    }
+    .two_row    {
+        display: flex;
+        justify-content:space-around;
+    }
+    #Adesoye, #Akin   {
+        margin-right: 0px;
+    }
+    .Ab_tm  {
+        margin-top: 30px;
+    }
+    .card   {
+        width: 44em;
+        height: 54em;
+    }
+    .JoinTheTeam    {
+        padding-top: 20px;
+    }
+    .contactIcons   {
+        margin-top: 20px;
+    }
+    .footerlogo {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 768px)  {
+    .logo img {
+        margin-right: 14em;
+    }
+    .intro  {
+        flex-direction: column;
+        height: 850px;
+    }
+    .intro-img  {
+        margin-top: 5em;
+        height: 600px;
+    }
+    .intro-details { 
+        margin-top: 20em;
+    }
+    .Header {
+        height: 800px;
+    }
+    .container  {
+        padding-top: 50px;
+    }
+    .cards-wrapper  {
+        padding: 0;
+    }
+    .two_row {
+        flex-direction: column;
+    }
+    .Ab_tm    {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .JoinTheTeam    {
+        background-size: 100% 100%;
+    }
+    .nav-bar {
+        padding: 40px 52px 0 70px;
+    }
+}
+@media screen and (max-width:375px){
+   .logo img {
+    width: 100px;
+    height: 33px;
+    margin-right: 80px;
+   }
+   .nav-bar {
+       padding: 25px 10px 0 10px;
+   }
+   .nav-list li {
+       margin-left: 0;
+       margin-right: 10px;
+       font-size: 8px;
+       text-align: center;
+   }
+   .nav-list li a {
+    font-size: 12px;
+   }
+   .intro-details p {
+    font-size: 13px;
+    margin-top: 15px;
+    width: 338px;
+   }
+   .intro-details   {
+       padding: 0 10px 0 10px;
+       margin-top: 17em;
+   }
+   .intro-details h1 {
+    font-size: 28px;
+    }
+    .GetStarted {
+        text-align: center;
+    }
+    #emailAddress {
+        width: 305px;
+        height:45px;
+        margin-right: 0;
+    }
+    #submitbtn {
+        width: 305px;
+        margin-top: 15px;
+        height: 50px;
+    }
+    .intro-img {
+        margin-top: 7em;
+    }
+    .intro-img img {
+        height: 40%;
+    }
+    .card {
+        width: 32em;
+        height: 54em;
+    }
+    .container {
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
+    .container h1   {
+        font-size: 30px!important;
+    }
+    #Join h1 {
+        font-size: 2rem;
+    }
+    .wrappered  {
+        margin-top: 0;
+    }
+    .wrappered p {
+        font-size: 8.5px !important;
+    }
+    .big-text {
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 1;
+        margin: 0 0.2rem;
+    }
+    .CD-element span   {
+        font-size: 10px;
+    }
+    .days-count, .hours-count, .minutes-count {
+        margin-right: 10px;   
+    }
+    .days-count {
+        margin-left: 8px;
+    }
+    .Createaccount {
+        width: 340px;
+    }
+    .signup-content {
+        padding: 20px 25px;
+    }
+    .form-title {
+        font-size: 18px;
+    }
+    #submit {
+        width: 293px;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logooo {
+        margin-right: 0!important;
+    }
+    .footerlogo {
+        text-align: center;
+    }
+    .footer1    {
+        align-items: center;
+        justify-content: center;
+    }
+    .foote, .tired {
+        margin-right: 30px!important;
+    }
+    .stranded   {
+        margin-top: 40px;
+    }
+    .stranded li, .tired li {
+        margin-top: 5px;
+    }
+    .tired {
+        margin-right: 0!important;
+    }
+}
+@media screen and (max-width: 360px){
+    #logologo {
+        margin-right: 4em!important;
+    }
+    .card   {
+        margin: 0 30px 50px 20px
+    }
+}
+/* @media screen and (max-width:411px){
+    .card {
+        width: 35em;
+        height: 54em;
+    }
+    .JoinTheTeam  h1  {
+        font-size: 2rem;
+    }
+} */
+/* @media screen and (max-width: 414px) {
+   .nav-bar {
+    padding: 25px 10px 0 20px;
+   } 
+   .nav-list li {
+    margin-left: 0;
+    margin-right: 10px;
+    font-size: 8px;
+    text-align: center;
+    }
+    .GetStarted {
+        text-align: center;
+    }
+    #emailAddress {
+        width: 305px;
+        height:45px;
+        margin-right: 0;
+    }
+    .logo img {
+        margin-right: 6em;
+        width: 130px;
+        height: 44px;
+    }
+    .intro-details h1 {
+        font-size: 30px;
+    }
+    .intro-details p    {
+    width: 350px;
+    }
+    #submitbtn {
+        width: 305px;
+        margin-top: 15px;
+        height: 50px;
+    }
+    .intro-details {
+        padding-left: 13px;
+        padding-right: 12px;
+        margin-top: 18em;
+    }
+    .intro-img img {
+        height: 48%;
+    }
+    .signup-content {
+        padding: 20px 25px;
+    }
+    .Createaccount {
+        width: 340px;
+    }
+    #submit {
+        width: 294px;
+    }
+    .wrappered  {
+        margin-top: 0;
+    }
+    .wrappered p {
+        font-size: 8.5px !important;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerlogo {
+        text-align: center;
+    }
+    .footer1    {
+        align-items: center;
+        justify-content: center;
+    }
+    .foote, .tired {
+        margin-right: 30px!important;
+    }
+    .stranded   {
+        margin-top: 40px;
+    }
+    .stranded li, .tired li {
+        margin-top: 5px;
+    }
+    .tired {
+        margin-right: 0!important;
+    }
+    .nav-list {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-list li a {
+        font-size: 13px;
+    }
+} */
